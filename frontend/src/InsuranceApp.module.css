@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.AppHeader {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.chat {
+  width: 80%;
+  margin: 20px 0;
+  max-height: 60vh;
+  overflow-y: scroll; /* Allow scrolling */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.chat::-webkit-scrollbar {
+  display: none;  /* Hide ugly scrollbar  */
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.userMessage {
+  justify-content: flex-end;
+}
+
+.tinnieMessage {
+  justify-content: flex-start;
+}
+
+.bubble {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.userBubble {
+  background-color: #61dafb;
+  color: black;
+  border-radius: 20px 20px 0 20px;
+}
+
+.tinnieBubble {
+  background-color: #282c34;
+  color: white;
+  border-radius: 20px 20px 20px 0;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 30%; /* adjustment here widens the input box*/
+}
+
+.textArea {
+  
+  width: 80%;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
