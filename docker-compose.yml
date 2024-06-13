@@ -1,0 +1,27 @@
+version: "3"
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - 80:80
+    volumes:
+      - frontend-build:/usr/src/app/build
+    networks:
+      - mono-m4-network
+
+  backend:
+    build: ./backend
+    ports:
+      - 3001:3001
+    env_file:
+      - ./backend/.env
+    volumes:
+      - frontend-build:/usr/src/frontend/build
+    networks:
+      - mono-m4-network
+
+volumes:
+  frontend-build:
+
+networks:
+  mono-m4-network:

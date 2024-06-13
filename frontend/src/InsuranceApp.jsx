@@ -16,11 +16,14 @@ function InsuranceApp() {
   const handleUserInputSubmit = async () => {
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:3001/api/insurance", {
-        userInput,
-        chat,
-        questionCount,
-      });
+     const response = await axios.post(
+       `${process.env.REACT_APP_API_BASE_URL}/api/insurance`,
+       {
+         userInput,
+         chat,
+         questionCount,
+       }
+     );
       setChat([
         ...chat,
         { user: userInput },

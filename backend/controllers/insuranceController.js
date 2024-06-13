@@ -1,6 +1,10 @@
+// const fetch = require("node-fetch"); //get rid of if fix doesn't work
+// globalThis.fetch = fetch; // Polyfill fetch globally - get rid of if fix doesn't work
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+
 
 async function callGoogleGemini(promptContent, retryCount = 0) {
   try {
